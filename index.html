@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nova — Beautifully minimal web starter</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="A sleek, accessible, and responsive website template with dark mode, animations, and modern components." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+   
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="container nav" aria-label="Primary">
+            <a href="#" class="brand" aria-label="Nova Home">
+                <span class="logo" aria-hidden="true"></span>
+                <span>Nova</span>
+            </a>
+            <nav aria-label="Main">
+                <ul id="navlist">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <!-- Sun/Moon icon -->
+                    <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+                <a class="btn ghost" href="#pricing">See Pricing</a>
+                <a class="btn primary" href="#contact">Get Started</a>
+                <button class="theme-toggle mobile-toggle" id="menuToggle" aria-controls="navlist" aria-expanded="false"
+                    aria-label="Open menu">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero container">
+            <div class="hero-grid">
+                <div class="reveal in">
+                    <div class="eyebrow">
+                        <span class="badge">New</span>
+                        <span class="text-muted">Meet Nova — ship faster with taste</span>
+                    </div>
+                    <h1>Design-first website starter that looks <em>premium</em> out of the box.</h1>
+                    <p>Build modern sites with motion, dark mode, accessibility, and a crisp, editorial vibe — no
+                        framework required. Copy, paste, customize.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#features">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                            Explore Features
+                        </a>
+                        <a class="btn" href="#gallery">See Gallery</a>
+                        <a class="btn ghost" href="#contact">Talk to us</a>
+                    </div>
+                </div>
+                <div class="hero-card reveal in" aria-hidden="true">
+                    <div class="canvas" id="orbital">
+                        <div class="orbit">
+                            <div class="dot" style="top:-6px; left: calc(50% - 6px)"></div>
+                            <div class="dot" style="bottom:-6px; left: calc(50% - 6px)"></div>
+                            <div class="dot" style="top: calc(50% - 6px); left:-6px"></div>
+                            <div class="dot" style="top: calc(50% - 6px); right:-6px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="container">
+            <h2 class="section-title">Hand-picked features</h2>
+            <p class="section-sub">Everything you need, nothing you don’t. Polished, production-ready patterns.</p>
+            <div class="grid">
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 7h16M4 12h10M4 17h7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Accessible Navigation</h3>
+                    <p>Skip links, focus styles, semantics, and keyboard-friendly interactions baked in.</p>
+                </article>
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Dark Mode <span class="badge">Auto</span></h3>
+                    <p>Respects system settings and persists your preference in localStorage.</p>
+                </article>
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 19l8-14 8 14H4Z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Motion, tastefully</h3>
+                    <p>Subtle entrance animations & micro-interactions powered by native CSS + JS.</p>
+                </article>
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 6h8v12H8z" stroke="currentColor" stroke-width="2" />
+                            <path d="M4 10h4M16 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Pricing Toggle</h3>
+                    <p>Monthly/annual plans with real-time price math and “most popular” highlight.</p>
+                </article>
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Performance-first</h3>
+                    <p>No frameworks, minimal JS, optimized paints, and lazy assets by default.</p>
+                </article>
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 12h16M4 12a8 8 0 0 1 16 0M4 12a8 8 0 0 0 16 0" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>SEO-friendly</h3>
+                    <p>Metadata, semantic HTML, and clean heading structure that search engines love.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="container">
+            <h2 class="section-title">Simple pricing</h2>
+            <p class="section-sub">Choose monthly or save 20% with annual billing.</p>
+
+            <div class="toggle" role="group" aria-label="Billing interval">
+                <span>Monthly</span>
+                <label class="switch" aria-label="Toggle annual billing">
+                    <input type="checkbox" id="billSwitch" />
+                    <span class="knob"></span>
+                </label>
+                <span>Annual <span class="badge">-20%</span></span>
+            </div>
+
+            <div class="pricing-wrap">
+                <article class="price-card reveal">
+                    <h3>Starter</h3>
+                    <p class="section-sub">For personal projects and tinkering.</p>
+                    <p class="price"><span data-amount="12">$12</span> <small>/ <span class="interval">mo</span></small>
+                    </p>
+                    <ul class="feature-list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> 1 project</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> Community support</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> Basic analytics</li>
+                    </ul>
+                    <a href="#contact" class="btn" aria-label="Choose Starter">Choose Starter</a>
+                </article>
+                <article class="price-card popular reveal">
+                    <span class="badge" style="position:absolute; top:12px; right:12px">Most Popular</span>
+                    <h3>Pro</h3>
+                    <p class="section-sub">For freelancers & indie hackers.</p>
+                    <p class="price"><span data-amount="24">$24</span> <small>/ <span class="interval">mo</span></small>
+                    </p>
+                    <ul class="feature-list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> 10 projects</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> Priority support</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> Advanced analytics</li>
+                    </ul>
+                    <a href="#contact" class="btn primary" aria-label="Choose Pro">Go Pro</a>
+                </article>
+                <article class="price-card reveal">
+                    <h3>Business</h3>
+                    <p class="section-sub">For teams that scale.</p>
+                    <p class="price"><span data-amount="59">$59</span> <small>/ <span class="interval">mo</span></small>
+                    </p>
+                    <ul class="feature-list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> Unlimited projects</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> SSO & audit logs</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg> Dedicated support</li>
+                    </ul>
+                    <a href="#contact" class="btn" aria-label="Choose Business">Contact Sales</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="stories" class="container">
+            <h2 class="section-title">Loved by builders</h2>
+            <p class="section-sub">Real words from delightfully picky humans.</p>
+
+            <div class="slider reveal" aria-roledescription="carousel" aria-label="Testimonials">
+                <div class="slides" id="slides" role="group">
+                    <article class="slide" aria-roledescription="slide" aria-label="1 of 3">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <div>
+                            <h3>“The best front-end starter I’ve used.”</h3>
+                            <p class="section-sub">Nova let me ship a polished landing in a day. The defaults are
+                                tasteful and the code is clean.</p>
+                            <p>— Alex W., Indie dev</p>
+                        </div>
+                    </article>
+                    <article class="slide" aria-roledescription="slide" aria-label="2 of 3">
+                        <div class="avatar" style="background: radial-gradient(circle at 30% 30%, #fff, var(--accent))">
+                        </div>
+                        <div>
+                            <h3>“Accessible out of the box.”</h3>
+                            <p class="section-sub">Skip links and focus outlines saved me hours. Keyboard nav just
+                                works.</p>
+                            <p>— Priya S., Designer</p>
+                        </div>
+                    </article>
+                    <article class="slide" aria-roledescription="slide" aria-label="3 of 3">
+                        <div class="avatar"
+                            style="background: radial-gradient(circle at 30% 30%, #fff, var(--brand-2))"></div>
+                        <div>
+                            <h3>“Dark mode is gorgeous.”</h3>
+                            <p class="section-sub">The theme system is simple and looks premium in both modes.</p>
+                            <p>— Marco D., Engineer</p>
+                        </div>
+                    </article>
+                </div>
+                <button class="prev" aria-label="Previous testimonial" id="prevSlide">‹</button>
+                <button class="next" aria-label="Next testimonial" id="nextSlide">›</button>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-sub">A few compositional ideas. Replace with product shots or case studies.</p>
+            <div class="gallery">
+                <!-- Using data URLs for crisp placeholder images -->
+                <figure class="g reveal"><img loading="lazy"
+                        src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%237c5cff'/><stop offset='1' stop-color='%2321d4fd'/></linearGradient></defs><rect width='1200' height='900' fill='url(%23g)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='64' fill='white' opacity='.9'>Vibrant Gradient</text></svg>"
+                        alt="Abstract gradient artwork"></figure>
+                <figure class="g reveal"><img loading="lazy"
+                        src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'><rect width='1200' height='900' fill='%2311162a'/><circle cx='600' cy='450' r='320' fill='%237c5cff'/><text x='50%' y='50%' dy='220' text-anchor='middle' font-family='Inter' font-size='48' fill='%23a3acc2'>Hero Orb</text></svg>"
+                        alt="Hero-style circle art"></figure>
+                <figure class="g reveal"><img loading="lazy"
+                        src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'><rect width='1200' height='900' fill='%2300ffa3'/><rect x='120' y='120' width='960' height='660' fill='%2311162a' rx='22'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='54' fill='white'>Card Layout</text></svg>"
+                        alt="Card layout art"></figure>
+                <figure class="g reveal"><img loading="lazy"
+                        src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'><rect width='1200' height='900' fill='%2321d4fd'/><path d='M0 740 Q600 560 1200 740 V900 H0 Z' fill='%237c5cff'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='60' fill='white'>Waves</text></svg>"
+                        alt="Wavy layout"></figure>
+                <figure class="g reveal"><img loading="lazy"
+                        src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'><defs><linearGradient id='h' x1='0' y1='0' x2='1' y2='0'><stop stop-color='%2300ffa3'/><stop offset='1' stop-color='%237c5cff'/></linearGradient></defs><rect width='1200' height='900' fill='url(%23h)'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='64' fill='white'>Diagonal</text></svg>"
+                        alt="Diagonal gradient"></figure>
+                <figure class="g reveal"><img loading="lazy"
+                        src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'><rect width='1200' height='900' fill='%23f7f9fc'/><g fill='none' stroke='%235b647a' opacity='.25'><path d='M0 450 Q600 150 1200 450'/><path d='M0 500 Q600 200 1200 500'/></g><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='54' fill='%23111322'>Light Mode</text></svg>"
+                        alt="Light theme art"></figure>
+            </div>
+
+            <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
+                <img src="" alt="" id="lightboxImg" />
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="container">
+            <h2 class="section-title">FAQ</h2>
+            <p class="section-sub">Short answers to common questions.</p>
+            <div class="accordion">
+                <details class="acc-item reveal">
+                    <summary><button aria-expanded="false">Can I use this template commercially? <svg width="18"
+                                height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg></button></summary>
+                    <div class="acc-content">
+                        <div class="acc-inner">Yes! This starter is MIT-style free to use. Attribution appreciated but
+                            not required.</div>
+                    </div>
+                </details>
+                <details class="acc-item reveal">
+                    <summary><button aria-expanded="false">Does it support frameworks? <svg width="18" height="18"
+                                viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg></button></summary>
+                    <div class="acc-content">
+                        <div class="acc-inner">Absolutely. Drop components into React, Vue, Svelte, or your favorite
+                            stack.</div>
+                    </div>
+                </details>
+                <details class="acc-item reveal">
+                    <summary><button aria-expanded="false">Is it accessible? <svg width="18" height="18"
+                                viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg></button></summary>
+                    <div class="acc-content">
+                        <div class="acc-inner">Yes — semantic HTML, focus styles, ARIA, and logical tab order are
+                            included.</div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section class="container">
+            <h2 class="section-title">From the blog</h2>
+            <p class="section-sub">Notes on design, performance, and craft.</p>
+            <div class="blog">
+                <article class="post reveal">
+                    <div class="thumb" role="img" aria-label="Gradient artwork thumbnail"></div>
+                    <div class="content">
+                        <h3><a href="#">Designing with color-mix()</a></h3>
+                        <p class="section-sub">A practical guide to modern color APIs that actually makes palettes fun.
+                        </p>
+                    </div>
+                    <div class="meta">8 min read · Color</div>
+                </article>
+                <article class="post reveal">
+                    <div class="thumb" style="background: linear-gradient(120deg, var(--accent), var(--brand-2))"
+                        role="img" aria-label="Waves thumbnail"></div>
+                    <div class="content">
+                        <h3><a href="#">Micro-interactions that matter</a></h3>
+                        <p class="section-sub">Use motion to reinforce meaning, not distract. Patterns and snippets.</p>
+                    </div>
+                    <div class="meta">6 min read · Motion</div>
+                </article>
+                <article class="post reveal">
+                    <div class="thumb" style="background: linear-gradient(120deg, #ffb94f, #ff5c7a)" role="img"
+                        aria-label="Warm gradient thumbnail"></div>
+                    <div class="content">
+                        <h3><a href="#">Shipping accessible by default</a></h3>
+                        <p class="section-sub">How semantic HTML and tiny habits help everyone.</p>
+                    </div>
+                    <div class="meta">5 min read · A11y</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="container">
+            <h2 class="section-title">Let’s build something great</h2>
+            <p class="section-sub">Tell us a bit about your project and we’ll get back within 24 hours.</p>
+            <div class="success-banner" id="successBanner" role="status" aria-live="polite">Thanks! Your message is on
+                its way ✔️</div>
+            <form id="contactForm" novalidate>
+                <div class="row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" autocomplete="name" placeholder="Ada Lovelace" required />
+                        <div class="error" id="errName" aria-live="polite"></div>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="ada@example.com"
+                            required />
+                        <div class="error" id="errEmail" aria-live="polite"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="budget">Budget</label>
+                        <select id="budget" name="budget" required>
+                            <option value="" disabled selected>Select a range</option>
+                            <option>Under $2k</option>
+                            <option>$2k–$5k</option>
+                            <option>$5k–$10k</option>
+                            <option>$10k+</option>
+                        </select>
+                        <div class="error" id="errBudget" aria-live="polite"></div>
+                    </div>
+                    <div class="field">
+                        <label for="timeline">Timeline</label>
+                        <select id="timeline" name="timeline" required>
+                            <option value="" disabled selected>Pick an option</option>
+                            <option>ASAP</option>
+                            <option>1–2 months</option>
+                            <option>3–6 months</option>
+                        </select>
+                        <div class="error" id="errTimeline" aria-live="polite"></div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="message">Project details</label>
+                    <textarea id="message" name="message" rows="5" placeholder="What are you building?"
+                        required></textarea>
+                    <div class="error" id="errMessage" aria-live="polite"></div>
+                </div>
+                <div style="display:flex; gap:.7rem; align-items:center; justify-content:flex-start">
+                    <button class="btn primary" type="submit">Send message</button>
+                    <label style="display:inline-flex; align-items:center; gap:.4rem; font-size:.95rem">
+                        <input type="checkbox" id="terms" required /> I agree to the terms
+                    </label>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="brand">
+                    <span class="logo" aria-hidden="true"></span>
+                    <strong>Nova</strong>
+                </div>
+                <p class="section-sub   ">Crafted with care. Built for speed.</p>
+                <div class="socials" aria-label="Social links">
+                    <a aria-label="Twitter" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.2-.8.5-1.7.9-2.6 1.1A3.9 3.9 0 0 0 12 8.6c0 .3 0 .6.1.9-3.2-.2-6-1.7-7.9-4-.4.7-.6 1.4-.6 2.3 0 1.5.8 2.8 1.9 3.5-.6 0-1.2-.2-1.7-.5v.1c0 2.1 1.5 3.8 3.4 4.2-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 1.9 2.4 3.2 4.5 3.3A7.9 7.9 0 0 1 2 19.5a11.2 11.2 0 0 0 6.1 1.8c7.3 0 11.3-6.1 11.3-11.3v-.5c.8-.5 1.5-1.2 2.1-1.9Z"
+                                fill="currentColor" />
+                        </svg></a>
+                    <a aria-label="GitHub" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 .8a11.2 11.2 0 0 0-3.5 21.8c.6.1.8-.3.8-.6v-2.1c-3.4.8-4.1-1.6-4.1-1.6-.6-1.6-1.4-2-1.4-2-1.1-.8.1-.8.1-.8 1.3.1 2 .1 3 .9 1.2 2 3.3 1.4 4.1 1 .1-.9.5-1.4 1-1.7-2.7-.3-5.6-1.3-5.6-6A4.7 4.7 0 0 1 8 6.2a4.3 4.3 0 0 1 .1-3.1s1-.3 3.2 1.2a11.2 11.2 0 0 1 5.9 0C19.4 3 20.5 3.2 20.5 3.2c.2.8.3 2 .1 3a4.7 4.7 0 0 1 1.3 3.3c0 4.7-2.9 5.7-5.6 6 .6.5 1.1 1.5 1.1 3v4.5c0 .3.2.7.8.6A11.2 11.2 0 0 0 12 .8Z"
+                                fill="currentColor" />
+                        </svg></a>
+                    <a aria-label="Dribbble" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                            <path d="M5 5c4 4 8 8 10 14M5 19c3-3 9-6 14-6M8 5c6 1 9 4 11 8" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                        </svg></a>
+                </div>
+            </div>
+            <nav>
+                <h4>Product</h4>
+                <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.4rem">
+                    <li><a href="#features">Overview</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <h4>Company</h4>
+                <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.4rem">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <h4>Resources</h4>
+                <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.4rem">
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h4>Newsletter</h4>
+                <form id="newsletter" aria-label="Subscribe to newsletter">
+                    <div style="display:flex; gap:.5rem">
+                        <input name="newsletter" type="email" placeholder="you@domain.com"
+                            aria-label="Email for newsletter" required
+                            style="flex:1; padding:.7rem .8rem; border-radius:10px; border:1px solid #ffffff22; background:#ffffff10; color:inherit" />
+                        <button class="btn">Join</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container"
+            style="display:flex; justify-content:space-between; gap:1rem; margin-top:1.4rem; color:var(--text-muted); font-size:.95rem">
+            <span>© <span id="year"></span> Nova, Inc.</span>
+            <a href="#">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+        // -----------------------------
+        // JS: Interactions & features
+        // -----------------------------
+
+        // 1) Theme: respect system, persist user preference
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        // Apply stored theme or system preference on first paint
+        (function initTheme() {
+            const stored = localStorage.getItem('theme');
+            if (stored) { root.setAttribute('data-theme', stored); }
+            else {
+                const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+                root.setAttribute('data-theme', prefersLight ? 'light' : 'dark');
+            }
+            drawThemeIcon();
+        })();
+
+        function drawThemeIcon() {
+            const isLight = root.getAttribute('data-theme') === 'light';
+            themeIcon.innerHTML = isLight
+                ? '<circle cx="12" cy="12" r="5" fill="currentColor"></circle><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3"/><path d="M12 19v3"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.2 4.2l2.2 2.2"/><path d="M17.6 17.6l2.2 2.2"/><path d="M4.2 19.8l2.2-2.2"/><path d="M17.6 6.4l2.2-2.2"/></g>'
+                : '<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" fill="currentColor"></path>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const cur = root.getAttribute('data-theme');
+            const next = cur === 'light' ? 'dark' : 'light';
+            root.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            drawThemeIcon();
+        });
+
+        // 2) Mobile menu toggle (no layout shift)
+        const menuToggle = document.getElementById('menuToggle');
+        const navlist = document.getElementById('navlist');
+        menuToggle?.addEventListener('click', () => {
+            const shown = getComputedStyle(navlist).display !== 'none';
+            if (shown) {
+                navlist.style.display = 'none';
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                navlist.style.display = 'flex';
+                navlist.style.flexDirection = 'column';
+                navlist.style.gap = '.6rem';
+                navlist.style.position = 'absolute';
+                navlist.style.top = '64px';
+                navlist.style.right = '1rem';
+                navlist.style.padding = '.8rem';
+                navlist.style.background = getComputedStyle(document.body).getPropertyValue('--panel');
+                navlist.style.border = '1px solid #ffffff1f';
+                navlist.style.borderRadius = '12px';
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // 3) Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 4) Pricing toggle: monthly vs annual (20% off)
+        const billSwitch = document.getElementById('billSwitch');
+        const priceCards = [...document.querySelectorAll('#pricing .price-card')];
+        function updatePrices() {
+            const annual = billSwitch.checked;
+            document.querySelectorAll('#pricing .interval').forEach(el => el.textContent = annual ? 'yr' : 'mo');
+            priceCards.forEach(card => {
+                const span = card.querySelector('[data-amount]');
+                const base = Number(span.dataset.amount);
+                const amount = annual ? Math.round((base * 12) * 0.8) : base;
+                span.textContent = '$' + amount;
+            });
+        }
+        billSwitch.addEventListener('change', updatePrices);
+        updatePrices();
+
+        // 5) Testimonials slider
+        const slides = document.getElementById('slides');
+        const prev = document.getElementById('prevSlide');
+        const next = document.getElementById('nextSlide');
+        const total = slides.children.length;
+        let index = 0;
+        function go(i) {
+            index = (i + total) % total;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+        prev.addEventListener('click', () => go(index - 1));
+        next.addEventListener('click', () => go(index + 1));
+        // Auto-advance (pause on hover)
+        let timer = setInterval(() => go(index + 1), 5000);
+        slides.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+        slides.parentElement.addEventListener('mouseleave', () => timer = setInterval(() => go(index + 1), 5000));
+
+        // 6) Gallery lightbox
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightboxImg');
+        document.querySelectorAll('.gallery .g img').forEach(img => {
+            img.addEventListener('click', () => {
+                lbImg.src = img.src; lbImg.alt = img.alt;
+                lb.classList.add('open');
+            });
+        });
+        lb.addEventListener('click', (e) => { if (e.target === lb) lb.classList.remove('open') });
+        window.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.classList.remove('open') });
+
+        // 7) FAQ details: manage aria-expanded on buttons inside summary
+        document.querySelectorAll('.acc-item').forEach(item => {
+            const btn = item.querySelector('summary > button');
+            item.addEventListener('toggle', () => btn.setAttribute('aria-expanded', item.open ? 'true' : 'false'));
+        });
+
+        // 8) Contact form validation (client-side)
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('successBanner');
+        const validators = {
+            name: v => v.trim().length >= 2 || "Please enter your full name.",
+            email: v => /^\S+@\S+\.\S+$/.test(v) || "Please enter a valid email.",
+            budget: v => !!v || "Please choose a budget.",
+            timeline: v => !!v || "Please choose a timeline.",
+            message: v => v.trim().length >= 12 || "Tell us a bit more (min 12 chars).",
+            terms: v => v === true || "Please accept the terms."
+        };
+        function setError(id, msg) { document.getElementById(id).textContent = msg || "" }
+        function getVal(id) {
+            const el = document.getElementById(id);
+            return el.type === 'checkbox' ? el.checked : el.value;
+        }
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let ok = true;
+            const fields = ['name', 'email', 'budget', 'timeline', 'message', 'terms'];
+            fields.forEach(f => {
+                const value = getVal(f);
+                const check = validators[f](value);
+                const errId = 'err' + f.charAt(0).toUpperCase() + f.slice(1);
+                if (check !== true) { ok = false; setError(errId, check) } else { setError(errId, "") }
+            });
+            if (ok) {
+                // Fake submit — replace with fetch('/api/contact', {method:'POST', body:...})
+                success.classList.add('show');
+                form.reset();
+                // Reset selects placeholder option
+                form.querySelectorAll('select').forEach(s => s.selectedIndex = 0);
+                // Hide banner after a bit
+                setTimeout(() => success.classList.remove('show'), 4000);
+            }
+        });
+
+        // 9) Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 10) Subtle parallax for hero dots
+        const orbital = document.getElementById('orbital');
+        if (window.matchMedia('(pointer:fine)').matches) {
+            orbital.addEventListener('pointermove', (e) => {
+                const rect = orbital.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - .5;
+                const y = (e.clientY - rect.top) / rect.height - .5;
+                orbital.style.transform = `perspective(800px) rotateX(${y * -4}deg) rotateY(${x * 6}deg)`;
+            });
+            orbital.addEventListener('pointerleave', () => orbital.style.transform = '');
+        }
+    </script>
+</body>
+
+</html>
